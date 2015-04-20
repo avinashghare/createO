@@ -47,8 +47,9 @@ class Image extends CI_Controller {
                     // header("content-type:image/png");
                     $photo = @imagecreatefrompng("$imagepath");
                 } else {
-                    // header("content-type:image/jpeg");
-                    $photo = @imagecreatefromjpeg("./uploads/no-format.jpg");
+                    header("content-type:image/jpeg");
+					echo read_file("./uploads/no-format.jpg");
+					return 0;
                 }
             } else {
                 // header("content-type:image/jpeg");
