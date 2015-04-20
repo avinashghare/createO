@@ -1,68 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Mosaddek">
-    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <link rel="shortcut icon" href="img/favicon.html">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login page | CreateO</title>
 
-    <title><?php echo getconfig("projectname");?> | Login</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/bootstrap-reset.css'); ?>" rel="stylesheet">
-    <!--external css-->
-    <link href="<?php echo base_url('assets/assets/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/style-responsive.css'); ?>" rel="stylesheet" />
+	<!--STYLESHEET-->
+	<!--=================================================-->
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
+	<!--Open Sans Font [ OPTIONAL ] -->
+ 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+
+	<!--Bootstrap Stylesheet [ REQUIRED ]-->
+	<link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+
+
+	<!--Nifty Stylesheet [ REQUIRED ]-->
+	<link href="<?php echo base_url('assets/css/nifty.min.css'); ?>" rel="stylesheet">
+
+	
+	<!--Font Awesome [ OPTIONAL ]-->
+	<link href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet">
+
+
+	<!--Demo [ DEMONSTRATION ]-->
+	<link href="<?php echo base_url('assets/css/demo/nifty-demo.min.css'); ?>" rel="stylesheet">
+
+
+
+
+	<!--SCRIPT-->
+	<!--=================================================-->
+
+	<!--Page Load Progress Bar [ OPTIONAL ]-->
+	<link href="<?php echo base_url('assets/plugins/pace/pace.min.css'); ?>" rel="stylesheet">
+	<script src="<?php echo base_url('assets/plugins/pace/pace.min.js'); ?>"></script>
+
+
+	
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+		
+
 </head>
 
-  <body class="login-body">
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
 
-    <div class="container">
+<body>
+	<div id="container" class="cls-container">
+		
+		<!-- BACKGROUND IMAGE -->
+		<!--===================================================-->
+		<div id="bg-overlay" class="bg-img img-balloon"></div>
+		
+		
+		<!-- HEADER -->
+		<!--===================================================-->
+		<div class="cls-header cls-header-lg">
+			<div class="cls-brand">
+				<a class="box-inline" href="index.html">
+					<!-- <img alt="Nifty Admin" src="img/logo.png" class="brand-icon"> -->
+					<span class="brand-title">CreateO <span class="text-thin"></span></span>
+				</a>
+			</div>
+		</div>
+		<!--===================================================-->
+		
+		
+		<!-- LOGIN FORM -->
+		<!--===================================================-->
+		<div class="cls-content">
+			<div class="cls-content-sm panel">
+				<div class="panel-body">
+					<p class="pad-btm">Sign In to your account</p>
+					<form method="post" action="<?php echo site_url('login/validate') ;?>">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-user"></i></div>
+								<input type="text" class="form-control" name="username" placeholder="Username">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+								<input type="password" class="form-control" name="password" placeholder="Password">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8 text-left checkbox">
+<!--
+								<label class="form-checkbox form-icon">
+								<input type="checkbox"> Remember me
+								</label>
+-->
+							</div>
+							<div class="col-xs-4">
+								<div class="form-group text-right">
+								<button class="btn btn-success text-uppercase" type="submit">Sign In</button>
+								</div>
+							</div>
+						</div>
+<!--
+						<div class="mar-btm"><em>- or -</em></div>
+						<button class="btn btn-primary btn-lg btn-block" type="button">
+							<i class="fa fa-facebook fa-fw"></i> Login with Facebook
+						</button>
+-->
+					</form>
+				</div>
+			</div>
+<!--
+			<div class="pad-ver">
+				<a href="pages-password-reminder.html" class="btn-link mar-rgt">Forgot password ?</a>
+				<a href="pages-register.html" class="btn-link mar-lft">Create a new account</a>
+			</div>
+-->
+		</div>
+		<!--===================================================-->
+		
+		
+		<!-- DEMO PURPOSE ONLY -->
+		<!--===================================================-->
+		<div class="demo-bg">
+			<div id="demo-bg-list">
+				<div class="demo-loading"><i class="fa fa-refresh"></i></div>
+				<img class="demo-chg-bg bg-trans" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-trns.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-1.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg active" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-2.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-3.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-4.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-5.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-6.jpg'); ?>" alt="Background Image">
+				<img class="demo-chg-bg" src="<?php echo base_url('assets/img/bg-img/thumbs/bg-img-7.jpg'); ?>" alt="Background Image">
+			</div>
+		</div>
+		<!--===================================================-->
+		
+		
+		
+	</div>
+	<!--===================================================-->
+	<!-- END OF CONTAINER -->
 
-      <form class="form-signin" method="post" action="<?php echo site_url('login/validate') ;?>">
-	  <?php if(isset($alerterror)) { ?>
-            <div class="alert alert-danger">
-            <?php echo $alerterror;	?>
-            </div>
-            <?php } ?>
-        <h2 class="form-signin-heading">sign in now</h2>
-        <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="User ID" autofocus name="username">
-            <input type="password" class="form-control" placeholder="Password" name="password">
-            <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
-            <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
-            <!--<p>or you can sign in via social network</p>
-            <div class="login-social-link">
-                <a href="index.html" class="facebook">
-                    <i class="icon-facebook"></i>
-                    Facebook
-                </a>
-                <a href="index.html" class="twitter">
-                    <i class="icon-twitter"></i>
-                    Twitter
-                </a>
-            </div>-->
 
-        </div>
+		
+	<!--JAVASCRIPT-->
+	<!--=================================================-->
 
-      </form>
-
-    </div>
+	<!--jQuery [ REQUIRED ]-->
+	<script src="<?php echo base_url('assets/js/jquery-2.1.1.min.js'); ?>"></script>
 
 
-  </body>
+	<!--BootstrapJS [ RECOMMENDED ]-->
+	<script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+
+
+	<!--Fast Click [ OPTIONAL ]-->
+	<script src="<?php echo base_url('assets/plugins/fast-click/fastclick.min.js'); ?>"></script>
+
+	
+	<!--Nifty Admin [ RECOMMENDED ]-->
+	<script src="<?php echo base_url('assets/js/nifty.min.js'); ?>"></script>
+
+
+	<!--Background Image [ DEMONSTRATION ]-->
+	<script src="<?php echo base_url('assets/js/demo/bg-images.js'); ?>"></script>
+
+	
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+		
+
+</body>
 </html>
