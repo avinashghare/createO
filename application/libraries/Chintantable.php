@@ -1,16 +1,11 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Chintantable {
     private $CI;
-<<<<<<< HEAD
-=======
     public $onlyelementjson=[];
->>>>>>> 9b5119900f783631c370a83ab3ff02a0ef955c68
     function __construct() {
         // Assign by reference with "&" so we don't create a copy
         $this->CI = & get_instance();
     }
-<<<<<<< HEAD
-=======
     public function createelement($field,$sort,$header,$alias)
     {
         $elements = new stdClass();
@@ -21,7 +16,6 @@ class Chintantable {
         array_push($this->onlyelementjson,$elements);
         return $this->onlyelementjson;
     }
->>>>>>> 9b5119900f783631c370a83ab3ff02a0ef955c68
     public function query($pageno = 1, $maxlength = 20, $orderby = "", $orderorder = "", $search = "", $elements, $from, $where = " WHERE 1 ", $group = "", $having = "", $order = "", $baseurl = "http://localhost/puneetdemo/index.php/site/index", $options = array()) {
         //        QUERY
         //            1. SELECT
@@ -82,13 +76,8 @@ class Chintantable {
         $return = new stdClass();
         $return->query = $selectquery . $fromquery . $wherequery . $groupquery . $havingquery . $orderquery . $limitquery;
         $return->queryresult = $this->CI->db->query($return->query)->result();
-<<<<<<< HEAD
-        $return->totalvalues = $this->CI->db->query("SELECT count(" . $elements[0]->field . ") as `totalcount` " . $fromquery . $wherequery . $groupquery . $havingquery)->row();
-        $return->totalvalues = intval($return->totalvalues->totalcount);
-=======
         $return->totalvalues = $this->CI->db->query($selectquery . $fromquery . $wherequery . $groupquery . $havingquery);
         $return->totalvalues = intval($return->totalvalues->num_rows());
->>>>>>> 9b5119900f783631c370a83ab3ff02a0ef955c68
         $return->pageno = $pageno;
         $return->lastpage = ceil($return->totalvalues / $maxlength);
         $return->elements = $elements;
@@ -132,11 +121,6 @@ class Chintantable {
     public function gethighstockjson($element1, $element2, $from, $where = "", $group = "", $having = "", $order = "", $limit = "", $otherselect = "") {
         if ($where == "") {
             $where = " WHERE 1 ";
-<<<<<<< HEAD
-        }
-        $query = "SELECT CONCAT(UNIX_TIMESTAMP($element1),'000') AS `0`, $element2 as `1` $otherselect  $from $where $group $having $order $limit";
-        return $this->CI->db->query($query)->result_array();
-=======
         }
         $query = "SELECT CONCAT(UNIX_TIMESTAMP($element1),'000') AS `0`, $element2 as `1` $otherselect  $from $where $group $having $order $limit";
         return $this->CI->db->query($query)->result_array();
@@ -148,7 +132,6 @@ class Chintantable {
             $return[$row->id] = $row->name;
         }
         return $return;
->>>>>>> 9b5119900f783631c370a83ab3ff02a0ef955c68
     }
 }
 /* End of file Someclass.php */

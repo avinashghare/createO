@@ -219,7 +219,7 @@ class Site extends CI_Controller
 		$data['page']='edituser';
 		$data['page2']='block/userblock';
 		$data['title']='Edit User';
-		$this->load->view('template',$data);
+		$this->load->view('templatewith2',$data);
 	}
 	function editusersubmit()
 	{
