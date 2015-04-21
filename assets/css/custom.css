@@ -30,3 +30,8 @@
 .table .btn {
     padding: 2px 10px;
 }
+body,
+#content-container {
+    background-color: #F0EFEF;
+    color: #515151;
+}
