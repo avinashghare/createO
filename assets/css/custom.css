@@ -35,3 +35,6 @@ body,
     background-color: #F0EFEF;
     color: #515151;
 }
+.text-pad {
+    padding: 6px 10px;
+}
