@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Campaign Stars |
+    <title>CreateO |
         <?php echo $title; ?>
     </title>
     <!--    <link rel="icon" href="<?php echo base_url('assets/img/camp_logo.png'); ?>" type="image/x-icon" />-->
@@ -108,7 +108,6 @@
         allowClear: true,
         //minimumInputLength: 3,
 
-        });
         });
     </script>
 
@@ -233,7 +232,7 @@
 
                         <!--Messages Dropdown-->
                         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                        <li class="dropdown">
+                        <li class="dropdown" style="display:none;">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                                 <i class="fa fa-envelope fa-lg"></i>
                                 <span class="badge badge-header badge-warning">9</span>
@@ -345,7 +344,7 @@
 
                         <!--Notification dropdown-->
                         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                        <li class="dropdown">
+                        <li class="dropdown" style="display:none;">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                                 <i class="fa fa-bell fa-lg"></i>
                                 <span class="badge badge-header badge-danger">5</span>
@@ -485,7 +484,7 @@
 
                         <!--Mega dropdown-->
                         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                        <li class="mega-dropdown">
+                        <li class="mega-dropdown" style="display:none;">
                             <a href="#" class="mega-dropdown-toggle">
                                 <i class="fa fa-th-large fa-lg"></i>
                             </a>
@@ -591,7 +590,8 @@
                         <!--Language selector-->
                         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                         <li class="dropdown">
-                            <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown">
+<!--                            <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown">-->
+                            <a id="demo-lang-switch" class="lang-selector dropdown-toggle" href="#">
                                 <span class="lang-selected">
 									<img class="lang-flag" src="<?php echo base_url('assets/img/flags/united-kingdom.png'); ?>" alt="English">
 									<span class="lang-id">EN</span>
@@ -609,38 +609,7 @@
 										<span class="lang-name">English</span>
 									</a>
                                 </li>
-                                <li>
-                                    <!--France-->
-                                    <a href="#">
-										<img class="lang-flag" src="<?php echo base_url('assets/img/flags/france.png'); ?>" alt="France">
-										<span class="lang-id">FR</span>
-										<span class="lang-name">Français</span>
-									</a>
-                                </li>
-                                <li>
-                                    <!--Germany-->
-                                    <a href="#">
-										<img class="lang-flag" src="<?php echo base_url('assets/img/flags/germany.png'); ?>" alt="Germany">
-										<span class="lang-id">DE</span>
-										<span class="lang-name">Deutsch</span>
-									</a>
-                                </li>
-                                <li>
-                                    <!--Italy-->
-                                    <a href="#">
-										<img class="lang-flag" src="<?php echo base_url('assets/img/flags/italy.png'); ?>" alt="Italy">
-										<span class="lang-id">IT</span>
-										<span class="lang-name">Italiano</span>
-									</a>
-                                </li>
-                                <li>
-                                    <!--Spain-->
-                                    <a href="#">
-										<img class="lang-flag" src="<?php echo base_url('assets/img/flags/spain.png'); ?>" alt="Spain">
-										<span class="lang-id">ES</span>
-										<span class="lang-name">Español</span>
-									</a>
-                                </li>
+                                
                             </ul>
                         </li>
                         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -664,7 +633,7 @@
                             <div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
 
                                 <!-- Dropdown heading  -->
-                                <div class="pad-all bord-btm">
+                                <div class="pad-all bord-btm" style="display:none;">
                                     <p class="text-lg text-muted text-thin mar-btm">750Gb of 1,000Gb Used</p>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar" style="width: 70%;">
@@ -675,7 +644,7 @@
 
 
                                 <!-- User dropdown menu -->
-                                <ul class="head-list">
+                                <ul class="head-list" style="display:none;">
                                     <li>
                                         <a href="#">
                                             <i class="fa fa-user fa-fw fa-lg"></i> Profile

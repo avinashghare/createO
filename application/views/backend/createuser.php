@@ -9,7 +9,7 @@
         <div class="col-lg-12">
             <section class="panel">
                <div class="panel-heading">
-							<h3 class="panel-title">Edit User</h3>
+							<h3 class="panel-title">Create User</h3>
 						</div>
                 <div class="panel-body">
                     <form class="form-horizontal tasi-form" method="post" action="<?php echo site_url('site/createusersubmit');?>" enctype="multipart/form-data">
